@@ -1,7 +1,9 @@
 public class Transactions {
-    private int balance;
-    private int deposit;
-    private int withdrawal;
+    private double balance;
+    private double deposit;
+    private double withdrawal;
+
+    //private Account inAccount;
 
 
     public Transactions(int balance, int deposit, int withdrawal) {
@@ -12,15 +14,15 @@ public class Transactions {
     }
 
 
-    public int getBalance() {
+    public double getBalance() {
         return this.balance;
     }
 
-    public int getDeposit() {
+    public double getDeposit() {
         return deposit;
     }
 
-    public int getWithdrawal() {
+    public double getWithdrawal() {
         return withdrawal;
     }
 
