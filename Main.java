@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Defining the problem:
  * Build a basic banking application with simple primary functions like database, deposit and withdraw.
@@ -12,9 +14,12 @@
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Account account = new Account("Rafael Spindola","61 981763455","rafa.spin95@gmail.com");
         Transactions transactions = new Transactions(0,0,0);
         System.out.println("Your balance is: " + transactions.getBalance());
         transactions.deposit(1000);
     }
+
 
 }
