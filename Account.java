@@ -13,7 +13,7 @@ public class Account {
         this.email = email;
 
         this.accNumber = getAccNumber();
-        System.out.println("New user " + this.name + " with phone number " + this.phoneNumber + ", e-mail " + this.email + ". Your account number is: " + this.accNumber + ".");
+        System.out.println("New user " + this.name + " with phone number " + this.phoneNumber + " and e-mail " + this.email + ". Your account number is: " + this.accNumber + ".");
     }
 
     public int getAccNumber() {
@@ -23,6 +23,7 @@ public class Account {
 
         return randomNumber;
     }
+
 
     public String getName() {
         return name;
