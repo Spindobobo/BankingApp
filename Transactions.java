@@ -1,42 +1,61 @@
+import java.util.Scanner;
+
 public class Transactions {
     private double balance;
     private double deposit;
-    private double withdrawal;
+    private double withdraw;
 
     //private Account inAccount;
 
 
-    public Transactions(int balance, int deposit, int withdrawal) {
-        this.balance = 0;
+    public Transactions(int balance, int deposit, int withdraw) {
+        this.balance = balance;
         this.deposit = deposit;
-        this.withdrawal = withdrawal;
+        this.withdraw = withdraw;
 
     }
-
 
     public double getBalance() {
         return this.balance;
     }
 
     public double getDeposit() {
-        return deposit;
+        return this.deposit;
     }
 
-    public double getWithdrawal() {
-        return withdrawal;
+    public double getWithdraw() {
+        return this.withdraw;
     }
 
-    public void deposit(int depositAmount) {
-        this.balance += depositAmount;
-        System.out.println("Deposit of " + depositAmount + "USD made. New balance is: " + this.balance + "USD.");
+    public void deposit() {
+        Scanner scanner = new Scanner(System.in);
+        double amount;
+        do {
+            System.out.println("Enter the amount to deposit: ");
+            amount = scanner.nextDouble();
+            if (amount < 0)
+                System.out.println("Amount must be greater than 0");
+            else
+                this.balance += amount;
+            System.out.println("Your new balance is: " + this.balance);
+        } while (amount < 0);
+        scanner.nextLine();
     }
 
-    public void withdrawal(int withdrawalAmount) {
-        if (this.balance - withdrawalAmount < 0)
-            System.out.println("Only " + this.balance + "USD available. Withdrawal not processed.");
-        else {
-            this.balance -= withdrawalAmount;
-            System.out.println("Withdrawal of " + withdrawalAmount + "USD processed. Remaining balance " + this.balance + "USD.");
-        }
+    public void withdraw() {
+        Scanner scanner = new Scanner(System.in);
+        double amount;
+        do {
+            System.out.println("Enter the amount to withdraw: ");
+            amount = scanner.nextDouble();
+            if (amount < 0)
+                System.out.println("Amount must be greater than 0");
+            else if (amount > this.balance)
+                System.out.println("Amount must not be greater than balance of " + this.balance);
+            else
+                this.balance -= amount;
+            System.out.println("Your new balance is: " + this.balance);
+        } while (amount < 0);
+        scanner.nextLine();
     }
 }
