@@ -25,7 +25,7 @@ public class Main {
             choice = scanner.nextInt();
 
             if (choice < 1 || choice > 4) {
-                System.out.println("Invalid choice. Please choose 1-3");
+                System.out.println("Invalid choice. Please choose 1-4");
             }
 
         } while (choice < 1 || choice > 4);
