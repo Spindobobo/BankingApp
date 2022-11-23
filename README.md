@@ -3,9 +3,8 @@
 
 Defining the problem:
 
-Build a basic banking application with simple primary functions like account database, balance, deposit and withdraw.
-Later, I should add new functions to the older ones as I progress through the development process, like an UI.
-Finally, maybe implement SQL databases or APIs.
+Build a banking application with functions regardind creating an account, checking balance, doing deposit and withdraw.
+Later, I should add new functions to the older ones as I progress through the development process, like a SQL database or APIs.
 
 Steps:
 
